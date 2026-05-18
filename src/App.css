@@ -1,0 +1,66 @@
+#account-actions-btn {
+	anchor-name: --account-actions;
+
+	img {
+		border: 2px solid #0000;
+		transition: border-color .2s linear;
+	}
+}
+
+#account-actions-btn:hover img {
+	border: 2px solid var(--accent);
+}
+
+#account-actions:open {
+	position: fixed;
+	position-anchor: --account-actions;
+	top: calc(anchor(bottom) + .5rem);
+	right: anchor(right);
+	left: auto;
+}
+
+.account-action-list {
+	gap: 0.2rem;
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+.account-action {
+	background-color: var(--background);
+	padding: .75rem;
+
+	text-align: center;
+	
+	cursor: pointer;
+	
+	transition: background-color .2s linear;
+}
+
+.account-action:hover {
+	background-color: var(--background-800);
+
+	a { color: white; }
+}
+
+#main-content {
+	display: grid;
+	grid-template-columns: min-content auto;
+	padding: 3rem 7rem;
+}
+
+#page-list {
+	position: relative;
+}
+
+.page {
+	padding: .5rem;
+	border-radius: .5rem;
+}
+
+.page.disabled {
+	background-color: none;
+}
+
+.widget {
+	background-color: var(--accent-transparent);
+}

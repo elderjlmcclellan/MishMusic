@@ -1,0 +1,220 @@
+:root {
+	color-scheme: dark;
+	font-family: Roboto, system default;
+	
+	/* --text: white;
+	--background: #222222;
+
+	Potential Primary:
+	--primary: #3a31d8;
+	--primary: #3593f1;
+	--primary: #8A00C4;
+
+	--primary-transparent: #8A00C488;
+	--secondary: #333333;
+	--accent: #777fb5;
+	--accent-transparent: #777fb588; */
+	
+	--text: #edeaf0;
+	--text-50: #f2f0f4;
+	--text-100: #e6e1ea;
+	--text-200: #ccc3d5;
+	--text-300: #b3a5c0;
+	--text-400: #9988aa;
+	--text-500: #7f6a95;
+	--text-600: #665577;
+	--text-700: #4c3f5a;
+	--text-800: #332a3c;
+	--text-900: #19151e;
+	--text-950: #0d0b0f;
+
+	--background: #050406;
+	--background-50: #f2f0f5;
+	--background-100: #e6e0eb;
+	--background-200: #ccc2d6;
+	--background-300: #b3a3c2;
+	--background-400: #9985ad;
+	--background-500: #7f6699;
+	--background-600: #66527a;
+	--background-700: #4c3d5c;
+	--background-800: #33293d;
+	--background-900: #19141f;
+	--background-950: #0d0a0f;
+
+	--primary: #b19fc6;
+	--primary-50: #f2eff5;
+	--primary-100: #e5dfec;
+	--primary-200: #cbbfd9;
+	--primary-300: #b19fc6;
+	--primary-400: #9780b3;
+	--primary-500: #7d609f;
+	--primary-600: #644d80;
+	--primary-700: #4b3960;
+	--primary-800: #322640;
+	--primary-900: #191320;
+	--primary-950: #0d0a10;
+
+	--secondary: #554072;
+	--secondary-50: #f2eff6;
+	--secondary-100: #e4deed;
+	--secondary-200: #cabeda;
+	--secondary-300: #af9dc8;
+	--secondary-400: #947cb6;
+	--secondary-500: #7a5ca3;
+	--secondary-600: #614983;
+	--secondary-700: #493762;
+	--secondary-800: #312541;
+	--secondary-900: #181221;
+	--secondary-950: #0c0910;
+
+	--accent: #8f72b6;
+	--accent-50: #f2eef6;
+	--accent-100: #e4ddee;
+	--accent-200: #cabcdc;
+	--accent-300: #af9acb;
+	--accent-400: #9578ba;
+	--accent-500: #7a57a8;
+	--accent-600: #624587;
+	--accent-700: #493465;
+	--accent-800: #312343;
+	--accent-900: #181122;
+	--accent-950: #0c0911;
+
+	--static-0: rgba(255, 255, 255, 0.0);
+	--static-1: rgba(255, 255, 255, 0.1);
+	--static-2: rgba(255, 255, 255, 0.2);
+	--static-3: rgba(255, 255, 255, 0.3);
+	--static-4: rgba(255, 255, 255, 0.4);
+	--static-5: rgba(255, 255, 255, 0.5);
+	--static-6: rgba(255, 255, 255, 0.6);
+	--static-7: rgba(255, 255, 255, 0.7);
+	--static-8: rgba(255, 255, 255, 0.8);
+	--static-9: rgba(255, 255, 255, 0.9);
+
+	--danger: #FA8072;
+	
+	color: var(--text);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+html, body {
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 100%;
+	background-color: var(--background);
+}
+
+a {
+	color: inherit;
+	transition: color .2s linear;
+}
+
+a:hover { color: var(--primary); }
+
+button, .button {
+	border-radius: .5rem;
+	padding: .5rem;
+	background-color: var(--background-800);
+	color: var(--accent);
+	cursor: pointer;
+}
+
+button.primary, .button.primary {
+	background-color: var(--primary);
+	color: var(--background);
+}
+
+button.accent, .button.accent {
+	background-color: var(--accent);
+	color: var(--background);
+}
+
+dialog {
+	margin: auto;
+	border: 2px solid var(--background-700);
+}
+
+fieldset {
+	border: 2px dashed var(--accent);
+	border-radius: .5rem;
+
+	transition: opacity .2s linear;
+}
+
+fieldset:has(.fieldset-toggle) {
+	opacity: .7;
+
+	select:disabled {
+		opacity: 1;
+	}
+}
+fieldset:has(.fieldset-toggle:checked) { opacity: 1; }
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+}
+
+header { font-size: 1.5em; }
+
+img, svg {
+	max-width: var(--max-size, 100%);
+	max-height: var(--max-size, 100%);
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  text-align: right;
+}
+
+input, select {
+	width: attr(char-width ch);
+
+	padding: .2rem .5rem;
+	border-radius: .4rem;
+	background-color: var(--background-800);
+	border: 2px solid var(--background-900);
+	font-size: .9em;
+	color: inherit;
+	accent-color: var(--accent-600);
+
+	transition: border-color .2s linear;
+}
+
+legend {
+	background-color: var(--accent);
+	padding: .3rem;
+	border-radius: .5rem;
+}
+
+nav {
+	border-bottom: 2px solid var(--static-1);
+	anchor-name: --nav;
+}
+
+pre {
+	font-family: Roboto, system default;
+	text-wrap: wrap;
+}
+
+.primary { color: var(--primary); }
+.secondary { color: var(--secondary); }
+.accent { color: var(--accent); }
+.danger { color: var(--danger); }
+
+.bg-background { background-color: var(--background); }
+.bg-static-1 { background-color: var(--static-1); }
+.bg-800 { background-color: var(--background-800); }

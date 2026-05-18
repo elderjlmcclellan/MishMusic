@@ -1,0 +1,101 @@
+/*
+ *		Class In-line Styles
+ */
+
+.bind-to-cursor { position: fixed; }
+.hidden { display: none; }
+.disabled { opacity: .7; }
+
+.border-box { box-sizing: border-box; }
+
+.squircle--5 { border-radius: .5rem; }
+.squircle { border-radius: 1rem; }
+.circle { border-radius: 50%; }
+
+.pointer, [open-dialog] { cursor: pointer; }
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.hide-overflow { overflow: hidden; }
+
+.full-width { width: 100%; }
+.full-height { height: 100%; }
+
+.min-width { width: min-content; }
+.min-height { height: min-content; }
+
+.x-small { --max-size: 1.5rem; }
+.small { --max-size: 3rem; }
+.medium { --max-size: 7rem; }
+.large { --max-size: 12rem; }
+.x-large { --max-size: 20rem; }
+
+.dropdown-icon { --max-size: 40%; }
+
+.pad-0 { padding: 0; }
+.pad--5 { padding: .5rem; }
+.pad-1 { padding: 1rem; }
+.pad-3 { padding: 3rem; }
+
+.auto-grid, .stack { display: grid; }
+
+.auto-grid { grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); }
+.stack * { grid-row: 1; grid-column: 1; }
+
+.flex-row { display: flex; flex-direction: row; }
+.flex-col { display: flex; flex-direction: column; }
+
+.jfy-bsl { justify-content: baseline; }
+.jfy-ctr { justify-content: center; }
+.jfy-arn { justify-content: space-around; }
+.jfy-bwn { justify-content: space-between; }
+.jfy-evn { justify-content: space-evenly; }
+
+.aln-bsl { align-items: baseline; }
+.aln-ctr { align-items: center; }
+.aln-end { align-items: end; }
+
+.baseline { display: flex; justify-content: baseline; align-items: baseline; }
+.center { display: flex; justify-content: center; align-items: center; }
+.end { display: flex; justify-content: end; align-items: end; }
+
+.gap-1 { gap: 1rem; }
+.gap-3 { gap: 3rem; }
+
+.indent { text-indent: 4ch; }
+
+.bold { font-weight: 500; }
+.no-dec { text-decoration: none; }
+
+.size-reset { font-size: 1rem; }
+.size-1 { font-size: 1em; }
+.size-1-5 { font-size: 1.5em; }
+.size-2 { font-size: 2em; }
+
+/*
+ *		Custom Class Styles
+ */
+
+.pane, form, dialog {
+	border-radius: 1rem;
+	background-color: var(--background-900);
+	padding: 1rem;
+}
+
+.input-cell {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: .5rem;
+}
+
+input:read-only {
+	padding: 0;
+	background-color: transparent;
+}
